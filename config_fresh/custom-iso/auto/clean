@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -eux
+
+for dir in chroot/{dev/pts,proc,sys,var/lib/dpkg} ; do
+   if mountpoint -q "$dir" ; then
+      umount "$dir"
+   fi
+done
+
+lb clean noauto "${@}"
+
+# Remove generated files
+rm -f config/binary config/bootstrap config/chroot config/common config/source
+
+# Remove empty directories in config tree
+if ls config/*/ > /dev/null 2>&1 ; then
+	rmdir --ignore-fail-on-non-empty config/*/
+fi
+
+rm -f config/binary config/build config/bootstrap config/chroot config/common config/source
+rm -f build.log

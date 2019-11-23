@@ -7,3 +7,4 @@
 terraform.tfstate.backup
 .DS_Store
 access_key
+*.iso

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -eux
+
+export LB_BOOTSTRAP_INCLUDE="gnupg"
+
+lb config noauto \
+	--apt-recommends true \
+  --apt-indices false \
+	--apt-source-archives false \
+	--architecture amd64 \
+  --archive-areas "main contrib non-free" \
+	--binary-images iso-hybrid \
+	--cache true \
+	--cache-indices true \
+	--cache-packages true \
+	--clean \
+	--debian-installer false \
+	--distribution buster \
+	--memtest none \
+	--system live \
+	--win32-loader false \
+	"${@}"
