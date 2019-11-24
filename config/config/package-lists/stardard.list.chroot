@@ -2,10 +2,11 @@
 
 task-english
 task-laptop
-task-ssh-server
 
 sudo
 vim
 zsh
 curl
 git
+parted
+tree
