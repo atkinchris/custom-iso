@@ -12,12 +12,12 @@ label live-persistence
     menu label ^Persistence
     linux /live/vmlinuz
     initrd /live/initrd.img
-    append boot=live persistence
+    append boot=live quiet splash persistence
 
 label live-encrypted-persistence
     menu label ^Encrypted Persistence
     linux /live/vmlinuz
     initrd /live/initrd.img
-    append boot=live persistence persistence-encryption=luks
+    append boot=live quiet splash persistence persistence-encryption=luks
 
 END
