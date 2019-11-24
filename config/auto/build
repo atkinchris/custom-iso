@@ -2,7 +2,7 @@
 set -eu
 
 # Pipe all subsequent output to log file
-BUILD_LOG="./build.log"
+BUILD_LOG="/tmp/logs/build.log"
 exec >  >(tee -a "$BUILD_LOG")
 trap "kill -9 $! 2>/dev/null" EXIT HUP INT QUIT TERM
 exec 2> >(tee -a "$BUILD_LOG" >&2)

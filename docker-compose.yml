@@ -4,6 +4,12 @@ services:
   builder:
     build: .
     privileged: true
+    cap_add:
+      - SYS_ADMIN
     volumes:
       - ./builds:/tmp/builds
       - ./logs:/tmp/logs
+      - cache:/var/livecd/cache
+
+volumes:
+  cache:
