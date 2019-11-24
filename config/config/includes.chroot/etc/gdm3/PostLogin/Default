@@ -42,7 +42,7 @@ gsettings set org.gnome.desktop.screensaver primary-color '#ffffff'
 gsettings set org.gnome.desktop.screensaver secondary-color '#000000'
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Customise gnome-terminal (DISABLED - causes Gnome to crash)
 #_profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
@@ -53,4 +53,4 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 #gsettings set $_profile font 'Meslo LG L DZ for Powerline 12'
 
 # Bootstrap dotfiles
-/usr/dotfiles/bootstrap.sh
+# /usr/dotfiles/bootstrap.sh
