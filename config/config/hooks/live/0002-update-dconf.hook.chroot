@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eu
+
+dconf update
+chmod 0644 /etc/dconf/db/gdm
