@@ -2,7 +2,7 @@
 
 set -eu
 
-if [ -e /usr/sbin/plymouth-set-default-theme ] && [ -e /usr/share/plymouth/themes/fade-in ]
+if [ -e /usr/sbin/plymouth-set-default-theme ] && [ -e /usr/share/plymouth/themes/spinner ]
 then
-	plymouth-set-default-theme fade-in
+	plymouth-set-default-theme spinner
 fi
