@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -eu
+
+if [ ! -d isolinux ]; then
+    cd binary
+fi
+
+cat >>isolinux/live.cfg <<END
+
+label live-persistence
+    menu label ^Persistence
+    linux /live/vmlinuz
+    initrd /live/initrd.img
+    append boot=live persistence
+
+label live-encrypted-persistence
+    menu label ^Encrypted Persistence
+    linux /live/vmlinuz
+    initrd /live/initrd.img
+    append boot=live persistence persistence-encryption=luks
+
+END

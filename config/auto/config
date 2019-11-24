@@ -1,16 +1,20 @@
 #!/bin/bash
 set -eu
 
+export LB_BOOTSTRAP_INCLUDE="gnupg"
+
 lb config noauto \
   --apt-indices false \
-  --apt-source-archives false \
+	--apt-source-archives false \
+	--architecture amd64 \
   --archive-areas "main contrib non-free" \
-  --backports true \
-  --binary-images iso-hybrid \
-  --debian-installer false \
-  --memtest none \
-  --source false \
-  --system live \
-  --win32-loader false \
-  --zsync false \
-  "$@" 2>&1 | tee /tmp/logs/build.log
+	--binary-images iso-hybrid \
+	--cache true \
+	--cache-indices true \
+	--cache-packages true \
+	--clean \
+	--distribution buster \
+	--memtest none \
+	--system live \
+	--win32-loader false \
+	"${@}"

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -eu
+
+# Enable cryptsetup in the initramfs for later use with persistence
+# This is until https://bugs.debian.org/908220 has a proper fix.
+if [ -e /etc/cryptsetup-initramfs/conf-hook ]; then
+    if grep -q '^#CRYPTSETUP=' /etc/cryptsetup-initramfs/conf-hook; then
+	sed -i -e 's/^#CRYPTSETUP=.*/CRYPTSETUP=y/' /etc/cryptsetup-initramfs/conf-hook
+    else
+	echo "CRYPTSETUP=y" >>/etc/cryptsetup-initramfs/conf-hook
+    fi
+fi
+
+# Rebuild the initramfs to include the change
+update-initramfs -u
