@@ -8,3 +8,7 @@ silversearcher-ag
 
 # Essential build tools, especially for native npm modules
 build-essential
+
+# Development tools
+nodejs
+code
