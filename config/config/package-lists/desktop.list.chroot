@@ -8,6 +8,9 @@ plymouth-themes
 gstreamer1.0-vaapi
 i965-va-driver
 
+# Touchpad drivers
+xserver-xorg-input-mtrack
+
 arc-theme
 papirus-icon-theme
 gnome-shell-extensions
