@@ -5,3 +5,6 @@ ranger
 rofi
 rtv
 silversearcher-ag
+
+# Essential build tools, especially for native npm modules
+build-essential

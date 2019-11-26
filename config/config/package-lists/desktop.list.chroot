@@ -4,6 +4,7 @@ plymouth
 plymouth-x11
 plymouth-themes
 
+# Intel graphics drivers
 gstreamer1.0-vaapi
 i965-va-driver
 
