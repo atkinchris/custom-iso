@@ -1,4 +1,4 @@
-deb https://packages.microsoft.com/repos/vscode stable main
+deb http://packages.microsoft.com/repos/vscode stable main
 
-deb https://deb.nodesource.com/node_10.x buster main
-deb-src https://deb.nodesource.com/node_10.x buster main
+deb http://deb.nodesource.com/node_10.x buster main
+deb-src http://deb.nodesource.com/node_10.x buster main
