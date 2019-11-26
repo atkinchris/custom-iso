@@ -1,6 +1,6 @@
 # Set keyboard
 [org/gnome/desktop/input-sources]
-sources="[('xkb', 'gb+mac')]"
+sources=[('xkb', 'gb+mac')]
 
 # Turn on automatic date/time
 [org/gnome/desktop/datetime]
@@ -8,32 +8,32 @@ automatic-timezone=true
 
 # Set background and lock screen
 [org/gnome/desktop/background]
-picture-uri="file:///usr/share/backgrounds/gnome/Icescape.jpg"
-picture-options="zoom"
-primary-color="#ffffff"
-secondary-color="#000000"
+picture-uri='file:///usr/share/backgrounds/gnome/Icescape.jpg'
+picture-options='zoom'
+primary-color='#ffffff'
+secondary-color='#000000'
 
 [org/gnome/desktop/screensaver]
-picture-options="zoom"
-picture-uri="file:///usr/share/backgrounds/gnome/Icescape.jpg"
-primary-color="#ffffff"
-secondary-color="#000000"
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/gnome/Icescape.jpg'
+primary-color='#ffffff'
+secondary-color='#000000'
 
 # Set gtk theme
 [org/gnome/desktop/interface]
-gtk-theme="Arc-Dark"
+gtk-theme='Arc-Dark'
 
 # Enable extensions and set dock favourites
 [org/gnome/shell]
-favorite-apps="['chromium.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop']"
-enabled-extensions="['dash-to-dock@micxgx.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']"
+favorite-apps=['chromium.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop']
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 
 # Set user theme
 [org/gnome/shell/extensions/user-theme]
-name="Arc-Dark"
+name='Arc-Dark'
 
 # Move and customise dock bar
 [org/gnome/shell/extensions/dash-to-dock]
-dock-position="BOTTOM"
+dock-position='BOTTOM'
 dash-max-icon-size=32
 require-pressure-to-show=false
