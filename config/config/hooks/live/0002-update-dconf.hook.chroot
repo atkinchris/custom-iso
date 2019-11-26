@@ -2,5 +2,8 @@
 
 set -eu
 
+# Update dconf after adding settings via keyfiles
 dconf update
-chmod 0644 /etc/dconf/db/gdm
+
+# Fix permissions after updating dconf, as these get reset
+chmod 0644 /etc/dconf/db/local
